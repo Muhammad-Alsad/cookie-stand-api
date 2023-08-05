@@ -1,21 +1,21 @@
-function getCookie(name) {
-  var cookieValue = null;
+function getCookieStand(name) {
+  var CookieStandValue = null;
 
-  if (document.cookie && document.cookie != '') {
-    var cookies = document.cookie.split(';');
+  if (document.CookieStand && document.CookieStand != '') {
+    var CookieStands = document.CookieStand.split(';');
 
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = jQuery.trim(cookies[i]);
+    for (var i = 0; i < CookieStands.length; i++) {
+      var CookieStand = jQuery.trim(CookieStands[i]);
 
-      // Does this cookie string begin with the name we want?
-      if (cookie.substring(0, name.length + 1) == (name + '=')) {
-        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+      // Does this CookieStand string begin with the name we want?
+      if (CookieStand.substring(0, name.length + 1) == (name + '=')) {
+        CookieStandValue = decodeURIComponent(CookieStand.substring(name.length + 1));
         break;
       }
     }
   }
 
-  return cookieValue;
+  return CookieStandValue;
 }
 
 function csrfSafeMethod(method) {

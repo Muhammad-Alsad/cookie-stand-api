@@ -208,7 +208,7 @@ $(function () {
     } else if (window.auth && window.auth.type === 'session') {
       // Session authentication
       options.auth = new coreapi.auth.SessionAuthentication({
-        csrfCookieName: 'csrftoken',
+        csrfCookieStandName: 'csrftoken',
         csrfHeaderName: 'X-CSRFToken'
       })
     }

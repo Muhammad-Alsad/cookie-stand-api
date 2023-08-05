@@ -58,15 +58,15 @@ function trim(str) {
   return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
 }
 
-function getCookie(cookieName, cookieString) {
-  cookieString = cookieString || window.document.cookie;
-  if (cookieString && cookieString !== '') {
-    var cookies = cookieString.split(';');
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = trim(cookies[i]);
-      // Does this cookie string begin with the name we want?
-      if (cookie.substring(0, cookieName.length + 1) === cookieName + '=') {
-        return decodeURIComponent(cookie.substring(cookieName.length + 1));
+function getCookieStand(CookieStandName, CookieStandString) {
+  CookieStandString = CookieStandString || window.document.CookieStand;
+  if (CookieStandString && CookieStandString !== '') {
+    var CookieStands = CookieStandString.split(';');
+    for (var i = 0; i < CookieStands.length; i++) {
+      var CookieStand = trim(CookieStands[i]);
+      // Does this CookieStand string begin with the name we want?
+      if (CookieStand.substring(0, CookieStandName.length + 1) === CookieStandName + '=') {
+        return decodeURIComponent(CookieStand.substring(CookieStandName.length + 1));
       }
     }
   }
@@ -79,7 +79,7 @@ var SessionAuthentication = function () {
 
     _classCallCheck(this, SessionAuthentication);
 
-    this.csrfToken = getCookie(options.csrfCookieName, options.cookieString);
+    this.csrfToken = getCookieStand(options.csrfCookieStandName, options.CookieStandString);
     this.csrfHeaderName = options.csrfHeaderName;
   }
 

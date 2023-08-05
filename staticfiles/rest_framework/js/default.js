@@ -18,12 +18,12 @@ $(document).ready(function() {
   });
 
   $('a[data-toggle="tab"]').click(function() {
-    document.cookie = "tabstyle=" + this.name + "; path=/";
+    document.CookieStand = "tabstyle=" + this.name + "; path=/";
   });
 
-  // Store tab preference in cookies & display appropriate tab on load.
+  // Store tab preference in CookieStands & display appropriate tab on load.
   var selectedTab = null;
-  var selectedTabName = getCookie('tabstyle');
+  var selectedTabName = getCookieStand('tabstyle');
 
   if (selectedTabName) {
     selectedTabName = selectedTabName.replace(/[^a-z-]/g, '');
